@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="gulp 自动化工具," />
 
 
 
@@ -84,16 +84,31 @@
 
 
 
-<meta name="description">
+<meta name="description" content="gulp介绍  作为自动化构建工具，在实践中我们有两种选项,gulp及grunt.后起之秀gulp因为利用了node.js流的威力，即pipe操作，所以避免了中间文件的读写磁盘，只将最终结果写入磁盘，使得整个构建过程更为快速。  gulp的详细教程可参考
+
+gulp教程
+w3ctech的gulp教程翻译
+
+这两篇文章,通过这两篇文章开发者便可对gulp有一个不错的了解，接下来就是对gulp相关插件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gulp">
-<meta property="og:url" content="http://yoursite.com/2016/05/23/gulp/index.html">
+<meta property="og:title" content="hexo优化(gulp）">
+<meta property="og:url" content="http://yoursite.com/2016/05/23/gulp-hexo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-05-23T06:47:39.000Z">
+<meta property="og:description" content="gulp介绍  作为自动化构建工具，在实践中我们有两种选项,gulp及grunt.后起之秀gulp因为利用了node.js流的威力，即pipe操作，所以避免了中间文件的读写磁盘，只将最终结果写入磁盘，使得整个构建过程更为快速。  gulp的详细教程可参考
+
+gulp教程
+w3ctech的gulp教程翻译
+
+这两篇文章,通过这两篇文章开发者便可对gulp有一个不错的了解，接下来就是对gulp相关插件">
+<meta property="og:updated_time" content="2016-05-23T07:24:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gulp">
-<meta name="twitter:description">
+<meta name="twitter:title" content="hexo优化(gulp）">
+<meta name="twitter:description" content="gulp介绍  作为自动化构建工具，在实践中我们有两种选项,gulp及grunt.后起之秀gulp因为利用了node.js流的威力，即pipe操作，所以避免了中间文件的读写磁盘，只将最终结果写入磁盘，使得整个构建过程更为快速。  gulp的详细教程可参考
+
+gulp教程
+w3ctech的gulp教程翻译
+
+这两篇文章,通过这两篇文章开发者便可对gulp有一个不错的了解，接下来就是对gulp相关插件">
 
 
 
@@ -111,7 +126,7 @@
   };
 </script>
 
-  <title> gulp | Hexo </title>
+  <title> hexo优化(gulp） | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +266,7 @@
             
             
               
-                gulp
+                hexo优化(gulp）
               
             
           </h1>
@@ -269,13 +284,32 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/自动化构建-工具-优化/" itemprop="url" rel="index">
+                    <span itemprop="name">自动化构建 工具 优化</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/23/gulp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/23/gulp/" itemprop="commentsCount"></span>
+                <a href="/2016/05/23/gulp-hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/23/gulp-hexo/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -298,7 +332,13 @@
       
 
       
-        
+        <h3 id="gulp介绍"><a href="#gulp介绍" class="headerlink" title="gulp介绍"></a>gulp介绍</h3><p>  作为自动化构建工具，在实践中我们有两种选项,gulp及grunt.后起之秀gulp因为利用了node.js流的威力，即pipe操作，所以避免了中间文件的读写磁盘，只将最终结果写入磁盘，使得整个构建过程更为快速。<br>  gulp的详细教程可参考</p>
+<ul>
+<li><a href="https://markgoodyear.com/2014/01/getting-started-with-gulp" target="_blank" rel="external">gulp教程</a></li>
+<li><a href="http://www.w3ctech.com/topic/134" target="_blank" rel="external">w3ctech的gulp教程翻译</a></li>
+</ul>
+<p>这两篇文章,通过这两篇文章开发者便可对gulp有一个不错的了解，接下来就是对gulp相关插件的认知，gulp有很多的插件可以帮助开发者减少工作量。可以通过<a href="https://www.npmjs.com/package" target="_blank" rel="external">npm包介绍</a>寻找到自己需要的插件。接下来我们要介绍在这次hexo优化中使用到的插件。</p>
+<h3 id="gulp使用插件介绍"><a href="#gulp使用插件介绍" class="headerlink" title="gulp使用插件介绍"></a>gulp使用插件介绍</h3>
       
     </div>
 
@@ -317,18 +357,28 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/gulp-自动化工具/" rel="tag">#gulp 自动化工具</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/23/gulp-hexo/" rel="next" title="hexo优化(gulp）">
-                <i class="fa fa-chevron-left"></i> hexo优化(gulp）
+              <a href="/2016/05/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/23/gulp/" rel="prev" title="gulp">
+                gulp <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -354,8 +404,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/23/gulp/"
-           data-title="gulp" data-url="http://yoursite.com/2016/05/23/gulp/">
+      <div class="ds-thread" data-thread-key="2016/05/23/gulp-hexo/"
+           data-title="hexo优化(gulp）" data-url="http://yoursite.com/2016/05/23/gulp-hexo/">
       </div>
     
   </div>
@@ -446,7 +496,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp介绍"><span class="nav-number">1.</span> <span class="nav-text">gulp介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp使用插件介绍"><span class="nav-number">2.</span> <span class="nav-text">gulp使用插件介绍</span></a></li></ol></div>
             
           </div>
         </section>
