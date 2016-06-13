@@ -253,106 +253,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/23/gulp/" itemprop="url">
-                  gulp
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-23T14:47:39+08:00" content="2016-05-23">
-              2016-05-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/23/gulp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/23/gulp/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/05/23/gulp-hexo/" itemprop="url">
                   hexo优化(gulp）
                 </a>
@@ -429,7 +329,123 @@
 <li><a href="http://www.w3ctech.com/topic/134" target="_blank" rel="external">w3ctech的gulp教程翻译</a></li>
 </ul>
 <p>这两篇文章,通过这两篇文章开发者便可对gulp有一个不错的了解，接下来就是对gulp相关插件的认知，gulp有很多的插件可以帮助开发者减少工作量。可以通过<a href="https://www.npmjs.com/package" target="_blank" rel="external">npm包介绍</a>寻找到自己需要的插件。接下来我们要介绍在这次hexo优化中使用到的插件。</p>
-<h3 id="gulp使用插件介绍"><a href="#gulp使用插件介绍" class="headerlink" title="gulp使用插件介绍"></a>gulp使用插件介绍</h3>
+<h3 id="gulp使用插件介绍"><a href="#gulp使用插件介绍" class="headerlink" title="gulp使用插件介绍"></a>gulp使用插件介绍</h3><p>   <img src="/img/package.png" alt=""></p>
+<p>   图示后九种即为这次优化所需要的依赖.</p>
+<ul>
+<li>其中gulp-load-plugins可以自动地从package.json中加载任意Gulp插件然后把它们附加到一个对象上。实现简化代码的功能。</li>
+<li>gulp-autoprefixer可以根据浏览器版本给对应的css样式加上对应前缀，使得开发者可以较潇洒的书写代码,该插件有browsers等参数可配置</li>
+<li>gulp-minify-css可以实现css文件的压缩</li>
+<li>gulp-uglify可根据参数配置压缩js文件</li>
+<li>gulp-htmlmin则是压缩对应的html文件</li>
+<li>gulp-shell提供了一个可操作的命令行接口,执行譬如 echo等的命令流</li>
+<li>gulp-clean清理对应的文件，和linux命令的rm有相似之意</li>
+<li><p>gulp-replace 则是字符串替换，和js中的replace意思相似<br>根据这些依赖我们可以改造我们的gulpfile.js文件，使得它更好的完成我们的需求。下图则为gulpfile.js文件的核心内容</p>
+<p><img src="/img/gulpfile.png" alt=""></p>
+<p>其中实现了对css,js,html文件的压缩，并利用git shell实现了文件位置的不变，最后我们只需要执行gulp watch便可实现对整个public目录的文件压缩及变化监控</p>
+</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>此次改造参考了网上教程及某些github相关代码，目前仅对public二层子目录下的html,css,js文件有压缩效果，在性能上提升仍不够显著，后期应通过相关命令实现对public所有递归子目录文件的压缩</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/23/gulp/" itemprop="url">
+                  gulp
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-23T14:47:39+08:00" content="2016-05-23">
+              2016-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/23/gulp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/23/gulp/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
           
         
       
