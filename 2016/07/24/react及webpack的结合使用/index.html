@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>react及webpack的结合使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="webpack及react的搭配使用准备工作  目前webpack作为目前国内最火的打包及加载工具之一，经常在react工程中使用，接下来我们来详细了解下webpack的使用姿势  在接下来的操作步骤之前，需要先配置修改react工程下的package.json,增加devDependencies如下:  &amp;quot;css-loader&amp;quot;: &amp;quot;^0.23.1&amp;quot;,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react及webpack的结合使用">
+<meta property="og:url" content="http://yoursite.com/2016/07/24/react及webpack的结合使用/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="webpack及react的搭配使用准备工作  目前webpack作为目前国内最火的打包及加载工具之一，经常在react工程中使用，接下来我们来详细了解下webpack的使用姿势  在接下来的操作步骤之前，需要先配置修改react工程下的package.json,增加devDependencies如下:  &amp;quot;css-loader&amp;quot;: &amp;quot;^0.23.1&amp;quot;,">
+<meta property="og:image" content="http://oatasl78l.bkt.clouddn.com/1.png">
+<meta property="og:image" content="http://oatasl78l.bkt.clouddn.com/2.png">
+<meta property="og:updated_time" content="2016-07-24T12:22:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="react及webpack的结合使用">
+<meta name="twitter:description" content="webpack及react的搭配使用准备工作  目前webpack作为目前国内最火的打包及加载工具之一，经常在react工程中使用，接下来我们来详细了解下webpack的使用姿势  在接下来的操作步骤之前，需要先配置修改react工程下的package.json,增加devDependencies如下:  &amp;quot;css-loader&amp;quot;: &amp;quot;^0.23.1&amp;quot;,">
+<meta name="twitter:image" content="http://oatasl78l.bkt.clouddn.com/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-react及webpack的结合使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-react及webpack的结合使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/07/24/react及webpack的结合使用/" class="article-date">
   <time datetime="2016-07-24T12:21:31.000Z" itemprop="datePublished">2016-07-24</time>
@@ -74,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/24/react及webpack的结合使用/">react及webpack的结合使用</a>
+    <h1 class="article-title" itemprop="name">
+      react及webpack的结合使用
     </h1>
   
 
@@ -155,55 +160,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/24/hello-world/" class="article-date">
-  <time datetime="2016-07-24T12:00:24.000Z" itemprop="datePublished">2016-07-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/24/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2016/07/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/24/hello-world/" data-id="civ50en9r0000h6anxj9z62xb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
